@@ -1,4 +1,9 @@
 #include <iostream>
+#include "cUsuarios.h"
+#include "cServicios.h"
+#include "cVideos.h"
+#include "cAudios.h"
+#include "cJuegos.h"
 
 using namespace std;
 
