@@ -1,9 +1,10 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include "cEnum.h"
 
 using namespace std;
-enum eEstado{PRENDIDO, APAGADO, PAUSADO};
+
 class cServicios
 {
 private: 
@@ -13,10 +14,14 @@ private:
 	int Visitas;
 	int CantVisitas;
 	eEstado Estado;
-	cPaises Pais; //hacer enum
+	ePaises Pais; 
 public:
+#pragma region Constructor y Destructor
 	cServicios(string Nombre, float Duracion, float cont, int Visitas, int CantVisitas, eEstado Estado, cPaises Pais);
 	~cServicios();
+#pragma endregion
+
+#pragma region Metodos
 	void CalcularEstadistica();
 	void EstadisticaTipoCliente();
 	void EstadisticaUsuario();
@@ -28,6 +33,6 @@ public:
 	virtual void Pausar();
 	virtual void Descargar();
 	virtual void Disponible();
-	
+#pragma endregion
 };
 
