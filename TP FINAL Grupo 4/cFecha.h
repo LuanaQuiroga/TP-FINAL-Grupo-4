@@ -18,7 +18,7 @@ public:
 #pragma endregion
 
 #pragma region Metodos:
-
+//metodos de fecha
 #pragma endregion
 
 };

@@ -27,6 +27,8 @@ public:
 	void ChequearListas();
 	void IniciarSesion();
 	void CrearCUenta();
+	void SeleccionarServicio();
+	void UsarServicio();
 #pragma endregion
 };
 

@@ -132,6 +132,7 @@
     <ClInclude Include="cFecha.h" />
     <ClInclude Include="cJuegos.h" />
     <ClInclude Include="cServicios.h" />
+    <ClInclude Include="cServidor.h" />
     <ClInclude Include="cUsuarios.h" />
     <ClInclude Include="cVideos.h" />
   </ItemGroup>
@@ -140,10 +141,11 @@
     <ClCompile Include="cEnum.cpp" />
     <ClCompile Include="cFecha.cpp" />
     <ClCompile Include="cJuegos.cpp" />
-    <ClCompile Include="cServicios.cpp" />
+    <ClCompile Include="cServidor.cpp" />
     <ClCompile Include="cUsuarios.cpp" />
     <ClCompile Include="cVideos.cpp" />
-    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Servicios.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

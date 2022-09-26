@@ -17,7 +17,7 @@ private:
 	ePaises Pais; 
 public:
 #pragma region Constructor y Destructor
-	cServicios(string Nombre, float Duracion, float cont, int Visitas, int CantVisitas, eEstado Estado, cPaises Pais);
+	cServicios(string Nombre, float Duracion, float cont, int Visitas, int CantVisitas, eEstado Estado, ePaises Pais);
 	~cServicios();
 #pragma endregion
 
