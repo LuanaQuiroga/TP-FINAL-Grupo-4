@@ -5,6 +5,10 @@
 using namespace std;
 class cAudios
 {
+private:
+	const int duracionmax = 10;
+	int minutos;
+	int segundos;
 public:
 #pragma region Constructor y destructor:
 	cAudios();

@@ -6,6 +6,7 @@ using namespace std;
 class cJuegos
 {
 public:
+	static int contjuegos;
 #pragma region Constructor y Destructor:
 	cJuegos();
 	~cJuegos();
