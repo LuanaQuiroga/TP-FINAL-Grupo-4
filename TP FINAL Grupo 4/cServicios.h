@@ -13,7 +13,7 @@ private:
 	float cont;
 	int Visitas;
 	int CantVisitas;
-	eEstado Estado;
+	eEstadoNivel EstadoNivel;
 	ePaises Pais; 
 public:
 #pragma region Constructor y Destructor
@@ -28,11 +28,11 @@ public:
 	void PromUsuariosConectados();
 	void ListarServicios();
 
-	virtual void Iniciar();
-	virtual void Apagar();
-	virtual void Pausar();
-	virtual void Descargar();
-	virtual void Disponible();
+	virtual void Iniciar() = 0;
+	virtual void Apagar() = 0;
+	virtual void Pausar() = 0;
+	virtual void Descargar() = 0;
+	virtual void Disponible() = 0;
 #pragma endregion
 };
 

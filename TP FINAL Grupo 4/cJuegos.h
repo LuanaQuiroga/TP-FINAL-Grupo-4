@@ -1,10 +1,13 @@
 #pragma once
 #include <iostream>
 #include <string>
-
+#include "cEnum.h"
+#include "cServicios.h"
 using namespace std;
-class cJuegos
+class cJuegos: public cServicios
 {
+private:
+	eEstado estado;
 public:
 	static int contjuegos;
 #pragma region Constructor y Destructor:
@@ -17,7 +20,7 @@ public:
 	void Apagar();
 	void Pausar();
 	void Descargar();
-	void Disponible();
+	void Disponible(eTipoCliente Cliente);
 #pragma endregion
 };
 

@@ -11,6 +11,9 @@ using namespace std;
 
 int main()
 {
+	cFecha* aux = new cFecha();
+	//cJuegos* aux = new cJuegos();
+	/*
 	try {
 		cJuegos::contjuegos = 0;
 
@@ -60,4 +63,6 @@ int main()
 	catch (exception *ex) {
 		std::cout << ex->what();
 	}
+	*/
+	return 0;
 }
