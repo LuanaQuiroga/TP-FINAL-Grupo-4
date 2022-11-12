@@ -18,7 +18,6 @@ public:
 #pragma endregion
 
 #pragma region Metodos:
-//metodos de fecha
 	void VerificarFecha(int d, int m, int a);
 #pragma endregion
 

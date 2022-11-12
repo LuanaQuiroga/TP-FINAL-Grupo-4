@@ -39,6 +39,9 @@
     <ClInclude Include="cServidor.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="cBackUp.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cUsuarios.cpp">
@@ -66,6 +69,9 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="cServidor.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="cBackUp.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

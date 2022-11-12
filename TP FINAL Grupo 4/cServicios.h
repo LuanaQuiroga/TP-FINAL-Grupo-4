@@ -27,12 +27,18 @@ public:
 	void EstadisticaUsuario();
 	void PromUsuariosConectados();
 	void ListarServicios();
+#pragma endregion
 
+#pragma region Metodos Virtuales
 	virtual void Iniciar() = 0;
 	virtual void Apagar() = 0;
 	virtual void Pausar() = 0;
 	virtual void Descargar() = 0;
 	virtual void Disponible() = 0;
+#pragma endregion
+#pragma region Getters y Setters
+	eEstadoNivel getestado() { return this->EstadoNivel; }
+	ePaises getpais() { return this->Pais; }
 #pragma endregion
 };
 

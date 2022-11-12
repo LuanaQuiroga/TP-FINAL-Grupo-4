@@ -30,3 +30,8 @@ void cServidor::cBackUp() {
 void cServidor::GetEstadisticas() {
 
 }
+
+cUsuarios** cServidor::getListaUsuarios()
+{
+    return this ->ListaUsuarios;
+}

@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="cAudios.h" />
+    <ClInclude Include="cBackUp.h" />
     <ClInclude Include="cEnum.h" />
     <ClInclude Include="cFecha.h" />
     <ClInclude Include="cJuegos.h" />
@@ -138,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cAudios.cpp" />
+    <ClCompile Include="cBackUp.cpp" />
     <ClCompile Include="cEnum.cpp" />
     <ClCompile Include="cFecha.cpp" />
     <ClCompile Include="cJuegos.cpp" />

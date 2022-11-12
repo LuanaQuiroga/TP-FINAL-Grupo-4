@@ -1,5 +1,16 @@
 #include "cFecha.h"
+cFecha::cFecha() {
 
+}
+cFecha::cFecha(int d, int m, int a) {
+
+}
+cFecha::cFecha(int dia, int mes, int año, int hora, int minutos) {
+
+}
+cFecha::~cFecha() {
+
+}
 void cFecha::VerificarFecha(int d, int m, int a) {
 	bool bisiesto;
 	if (a % 4 == 0 && a % 100 != 0 || a % 400 == 0)

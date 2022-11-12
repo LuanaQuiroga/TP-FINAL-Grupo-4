@@ -3,6 +3,7 @@
 #include <string>
 #include "cEnum.h"
 #include "cServicios.h"
+
 using namespace std;
 class cJuegos: public cServicios
 {
@@ -21,6 +22,9 @@ public:
 	void Pausar();
 	void Descargar();
 	void Disponible(eTipoCliente Cliente);
+#pragma endregion
+#pragma region Getters y Setters
+	eEstado getestado() { return this->estado; }
 #pragma endregion
 };
 

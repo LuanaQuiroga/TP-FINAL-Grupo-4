@@ -1,10 +1,11 @@
 #pragma once
 #include <iostream>
 #include <string>
-class cServidor
-{
+#include "cUsuarios.h"
+using namespace std;
+class cServidor{
 private:
-
+	cUsuarios** ListaUsuarios;
 public:
 #pragma region Constructor y Destructor:
 	cServidor();
@@ -20,6 +21,9 @@ public:
 	void UsarServicio();
 	void cBackUp();
 	void GetEstadisticas();
+#pragma endregion
+#pragma region Getters y Setters
+	cUsuarios** getListaUsuarios();
 #pragma endregion
 };
 

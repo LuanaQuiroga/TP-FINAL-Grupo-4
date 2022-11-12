@@ -3,11 +3,13 @@
 #include <string>
 #include "cEnum.h"
 #include "cFecha.h"
-using namespace std;
+#include "cServicios.h"
 
+using namespace std;
 class cUsuarios
 {
 private:
+	tm Fecha;
 	string Nombre;
 	bool Estado;
 	int NumCliente;
@@ -16,7 +18,8 @@ private:
 	float TiempoUsoDiario;
 	eTipoCliente Cliente;
 	bool Logueado;
-	cFecha FechaLogging;
+	cFecha* FechaLogging;
+	cServicios** listaServicios;
 public:
 #pragma region Constructor y Destructor:
 	cUsuarios(string Nombre, bool Estado, int NumCliente, ePaises Pais, float TiempoUsoContinuo, float TiempoUsoDiario, eTipoCliente Cliente, bool Logueado, cFecha FechaLogging);
@@ -30,5 +33,9 @@ public:
 	void SeleccionarServicio();
 	void UsarServicio();
 #pragma endregion
+#pragma region Getters y Setters
+	tm getfechalogging() { return this->Fecha; }
+	eTipoCliente gettipocliente() { return this->Cliente; }
+	void sethoy();
 };
 
