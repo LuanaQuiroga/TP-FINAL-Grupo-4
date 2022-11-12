@@ -2,10 +2,12 @@
 #include <iostream>
 #include <string>
 #include "cUsuarios.h"
+#include "Lista.h"
 using namespace std;
 class cServidor{
 private:
-	cUsuarios** ListaUsuarios;
+	cLista<cUsuarios>* ListaUsuarios;
+	
 public:
 #pragma region Constructor y Destructor:
 	cServidor();
@@ -13,7 +15,7 @@ public:
 #pragma endregion
 
 #pragma region Metodos:
-	void AgregarUsuario();
+	void AgregarUsuario(cUsuarios* usuario);
 	void AgregarServicio();
 	void LoggearUsuario();
 	void ListarServicios();
@@ -23,7 +25,7 @@ public:
 	void GetEstadisticas();
 #pragma endregion
 #pragma region Getters y Setters
-	cUsuarios** getListaUsuarios();
+
 #pragma endregion
 };
 

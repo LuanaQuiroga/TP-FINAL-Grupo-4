@@ -6,20 +6,31 @@
 #include "cJuegos.h"
 #include "cFecha.h"
 #include "cServidor.h"
+#include "cEnum.h"
 
 using namespace std;
 
 int main()
 {
-	cFecha* aux = new cFecha();
+	cFecha* aux = new cFecha(12,11,2022);
+	cServidor* _servidor = new cServidor();  //inicializamos el servidor
+	cUsuarios* usuario1 = new cUsuarios("Pilar", true, ePaises::Argentina, eTipoCliente::FREE, true, aux);
+	cUsuarios* usuario2 = new cUsuarios("Pilar", true, ePaises::Argentina, eTipoCliente::FREE, true, aux);
+	cout << "Mi numero de cliente es: " << usuario1->getnumcliente() << endl;
+	cout << "Mi numero de cliente es: " << usuario2->getnumcliente() << endl;
+	_servidor->AgregarUsuario(usuario1);
+	_servidor->AgregarUsuario(usuario2);
+	cout << "Inserte un usuario";
+
+
+	delete aux;
+	delete _servidor;
+	  
 	//cJuegos* aux = new cJuegos();
 	/*
 	try {
 		cJuegos::contjuegos = 0;
-
-		cServidor* _servidor = new cServidor();  //inicializamos el servidor
-		//Le agregamos los usuarios
-		cUsuarios* usuario1 = new cUsuarios();  //Agregar _
+		
 		cServicios* servicio1 = new cVideos();
 		//cFecha* FechaHoy = new cFecha();
 		cout << "Ingrese el dia de hoy: ";

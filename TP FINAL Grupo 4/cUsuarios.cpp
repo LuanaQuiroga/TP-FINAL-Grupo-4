@@ -1,7 +1,17 @@
 #include "cUsuarios.h"
 
-cUsuarios::cUsuarios(string Nombre, bool Estado, int NumCliente, ePaises Pais, float TiempoUsoContinuo, float TiempoUsoDiario, eTipoCliente Cliente, bool Logueado, cFecha FechaLogging) {
-
+int cUsuarios::cont = 0;
+cUsuarios::cUsuarios(string nombre, bool estado, ePaises pais, eTipoCliente cliente, bool logueado, cFecha* fechalogging) {
+	this->Nombre = nombre;
+	this->Estado = estado;
+	this->Pais = pais;
+	this->Cliente = cliente;
+	this->NumCliente = cUsuarios::cont;
+	cUsuarios::cont++;
+	this->TiempoUsoContinuo = 0;
+	this->TiempoUsoDiario = 0;
+	this->Logueado = logueado;
+	this->FechaLogging = fechalogging;
 }
 
 cUsuarios::~cUsuarios() {

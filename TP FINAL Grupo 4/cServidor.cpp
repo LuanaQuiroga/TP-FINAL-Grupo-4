@@ -1,12 +1,14 @@
 #include "cServidor.h"
 
 cServidor::cServidor(){
+	this->ListaUsuarios = new cLista<cUsuarios>();
 
 }
 cServidor::~cServidor(){
 
 }
-void cServidor::AgregarUsuario(){
+void cServidor::AgregarUsuario(cUsuarios* usuario){
+	this->ListaUsuarios->Insertar(usuario);
 
 }
 void cServidor::AgregarServicio() {
@@ -31,7 +33,3 @@ void cServidor::GetEstadisticas() {
 
 }
 
-cUsuarios** cServidor::getListaUsuarios()
-{
-    return this ->ListaUsuarios;
-}

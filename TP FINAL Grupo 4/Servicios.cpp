@@ -1,6 +1,13 @@
 #include "cServicios.h"
-cServicios::cServicios(string Nombre, float Duracion, float cont, int Visitas, int CantVisitas, eEstado Estado, ePaises Pais) {
-
+cServicios::cServicios(string nombre, float duracion, float cont, int visitas, int cantVisitas, eEstadoNivel estadonivel, eEstado estado, ePaises pais) {
+	this->Nombre = nombre;
+	this->Duracion = duracion;
+	this->Cont = cont;
+	this->Visitas = visitas;
+	this->CantVisitas = cantVisitas;
+	this->EstadoNivel = estadonivel;
+	this->Estado = estado;
+	this->Pais = pais;
 }
 cServicios::~cServicios() {
 

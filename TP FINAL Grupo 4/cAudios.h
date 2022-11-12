@@ -3,8 +3,7 @@
 #include <string>
 
 using namespace std;
-class cAudios
-{
+class cAudios:public cServicios {
 private:
 	const int duracionmax = 10;
 	int minutos;

@@ -10,14 +10,15 @@ class cServicios
 private: 
 	string Nombre;
 	float Duracion;
-	float cont;
+	float Cont;
 	int Visitas;
 	int CantVisitas;
 	eEstadoNivel EstadoNivel;
+	eEstado Estado;
 	ePaises Pais; 
 public:
 #pragma region Constructor y Destructor
-	cServicios(string Nombre, float Duracion, float cont, int Visitas, int CantVisitas, eEstado Estado, ePaises Pais);
+	cServicios(string nombre, float duracion, float cont, int visitas, int cantVisitas, eEstadoNivel estadonivel,eEstado estado, ePaises pais);
 	~cServicios();
 #pragma endregion
 
@@ -30,9 +31,9 @@ public:
 #pragma endregion
 
 #pragma region Metodos Virtuales
-	virtual void Iniciar() = 0;
-	virtual void Apagar() = 0;
-	virtual void Pausar() = 0;
+	virtual void Iniciar(eEstado estado) = 0;
+	virtual void Apagar(eEstado estado) = 0;
+	virtual void Pausar(eEstado estado) = 0;
 	virtual void Descargar() = 0;
 	virtual void Disponible() = 0;
 #pragma endregion

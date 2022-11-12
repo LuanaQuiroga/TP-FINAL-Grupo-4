@@ -136,6 +136,7 @@
     <ClInclude Include="cServidor.h" />
     <ClInclude Include="cUsuarios.h" />
     <ClInclude Include="cVideos.h" />
+    <ClInclude Include="Lista.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cAudios.cpp" />
