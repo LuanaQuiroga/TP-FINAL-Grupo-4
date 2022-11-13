@@ -3,6 +3,8 @@
 #include <string>
 #include "cUsuarios.h"
 #include "Lista.h"
+#ifndef CSERVIDOR_H
+#define CSERVIDOR_H
 using namespace std;
 class cServidor{
 private:
@@ -28,4 +30,4 @@ public:
 
 #pragma endregion
 };
-
+#endif

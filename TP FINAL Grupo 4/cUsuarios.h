@@ -4,7 +4,8 @@
 #include "cEnum.h"
 #include "cFecha.h"
 #include "cServicios.h"
-
+#ifndef CUSUARIOS_H
+#define CUSUARIOS_H
 using namespace std;
 class cUsuarios
 {
@@ -20,7 +21,6 @@ private:
 	eTipoCliente Cliente;
 	bool Logueado;
 	cFecha* FechaLogging;
-	cServicios** listaServicios;
 public:
 #pragma region Constructor y Destructor:
 	cUsuarios(string Nombre, bool Estado, ePaises Pais, eTipoCliente Cliente, bool Logueado, cFecha* FechaLogging);
@@ -40,3 +40,12 @@ public:
 	eTipoCliente gettipocliente() { return this->Cliente; }
 	void sethoy();
 };
+//#endif
+
+
+
+
+
+
+
+

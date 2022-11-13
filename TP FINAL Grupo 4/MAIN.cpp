@@ -36,13 +36,14 @@ int main()
 	cout << "Inserte un usuario";
 	cJuegos::contjuegos = 0;
 	cLista<cUsuarios>* ListaUsuarios = new cLista<cUsuarios>();
-	//cJuegos* juego1 = new cJuegos();
+	cJuegos* juego1 = new cJuegos("Juego1",32.5,5,32,eEstadoNivel::Nivel2,eTipoCliente::FREE,eEstado::Apagado,ePaises::Chile);
 	
 
 
 	delete FechaHoy;
 	delete _servidor;
 	delete ListaUsuarios;
+	delete juego1;
 	  
 	//cJuegos* aux = new cJuegos();
 	/*
