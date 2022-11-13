@@ -3,10 +3,10 @@
 #include <string>
 #include "cEnum.h"
 #include "cServicios.h"
+#include "cServicios.h"
 
 using namespace std;
-class cJuegos: public cServicios
-{
+class cJuegos: public cServicios {
 private:
 	eEstado estado;
 public:
@@ -17,9 +17,9 @@ public:
 #pragma endregion
 
 #pragma region Metodos:
-	void Iniciar();
-	void Apagar();
-	void Pausar();
+	void Iniciar(eEstado* estado);
+	void Apagar(eEstado* estado);
+	void Pausar(eEstado* estado);
 	void Descargar();
 	void Disponible(eTipoCliente Cliente);
 #pragma endregion

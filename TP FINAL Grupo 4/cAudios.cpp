@@ -1,9 +1,6 @@
 #include "cAudios.h"
-#include "cEnum.h"
-#include "cServicios.h"
-cAudios::cAudios() {
 
-}
+
 cAudios::~cAudios() {
 
 }

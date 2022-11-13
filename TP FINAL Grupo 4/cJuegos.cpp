@@ -1,11 +1,19 @@
 #include "cJuegos.h"
-void cJuegos::Iniciar() {
+using namespace std;
 
-};
-void cJuegos::Apagar() {
+int cJuegos::contjuegos = 0;
+
+
+cJuegos::~cJuegos() {
 
 }
-void cJuegos::Pausar() {
+void cJuegos::Iniciar(eEstado* estado) {
+
+}
+void cJuegos::Apagar(eEstado* estado) {
+
+}
+void cJuegos::Pausar(eEstado* estado) {
 
 }
 void cJuegos::Descargar() {

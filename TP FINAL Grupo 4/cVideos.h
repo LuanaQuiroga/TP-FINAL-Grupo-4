@@ -1,10 +1,10 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include "cServicios.h"
 
 using namespace std;
-class cVideos
-{
+class cVideos: public cServicios{
 public:
 #pragma region Constructor y destructor:
 	cVideos();

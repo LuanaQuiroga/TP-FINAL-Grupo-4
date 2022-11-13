@@ -1,7 +1,6 @@
 #include "cVideos.h"
-cVideos::cVideos() {
 
-}
+
 cVideos::~cVideos() {
 
 }

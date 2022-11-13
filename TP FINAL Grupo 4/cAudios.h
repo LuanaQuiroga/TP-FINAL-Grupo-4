@@ -1,9 +1,10 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include "cServicios.h"
 
 using namespace std;
-class cAudios:public cServicios {
+class cAudios: public cServicios {
 private:
 	const int duracionmax = 10;
 	int minutos;

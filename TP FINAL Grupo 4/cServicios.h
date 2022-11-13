@@ -5,8 +5,8 @@
 
 using namespace std;
 
-class cServicios
-{
+class cServicios {
+	friend class cServidor;
 private: 
 	string Nombre;
 	float Duracion;
@@ -31,9 +31,9 @@ public:
 #pragma endregion
 
 #pragma region Metodos Virtuales
-	virtual void Iniciar(eEstado estado) = 0;
-	virtual void Apagar(eEstado estado) = 0;
-	virtual void Pausar(eEstado estado) = 0;
+	virtual void Iniciar(eEstado* estado) = 0;
+	virtual void Apagar(eEstado* estado) = 0;
+	virtual void Pausar(eEstado* estado) = 0;
 	virtual void Descargar() = 0;
 	virtual void Disponible() = 0;
 #pragma endregion
