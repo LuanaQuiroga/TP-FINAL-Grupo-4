@@ -27,7 +27,7 @@ void cServicios::PromUsuariosConectados() {
 void cServicios::ListarServicios() {
 
 }
-bool cServicios::Disponible(cServidor* servidor) {
-	//return usuario->gettipocliente() >= this->Cliente; //hacer con pais
-	return true;
+bool cServicios::Disponible(cUsuarios* usuario) {
+	return usuario->gettipocliente() >= this->Cliente; //hacer con pais
+	
 }

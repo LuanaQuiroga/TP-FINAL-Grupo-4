@@ -40,7 +40,7 @@ public:
 	eTipoCliente gettipocliente() { return this->Cliente; }
 	void sethoy();
 };
-//#endif
+#endif
 
 
 

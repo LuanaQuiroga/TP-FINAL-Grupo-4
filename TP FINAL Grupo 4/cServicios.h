@@ -8,7 +8,7 @@
 #define CSERVICIOS_H
 
 using namespace std;
-
+class cUsuarios;
 class cServicios {
 	friend class cServidor;
 private: 
@@ -32,7 +32,7 @@ public:
 	void EstadisticaUsuario();
 	void PromUsuariosConectados();
 	void ListarServicios();
-	bool Disponible(cServidor* servidor);
+	bool Disponible(cUsuarios* usuario);
 #pragma endregion
 
 #pragma region Metodos Virtuales

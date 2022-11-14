@@ -6,10 +6,12 @@
 #ifndef CSERVIDOR_H
 #define CSERVIDOR_H
 using namespace std;
-class cServidor{
+class cUsuarios;
+class cServicios;
+class cServidor{ 
 private:
 	cLista<cUsuarios>* ListaUsuarios;
-	
+	cLista<cServicios>* ListaServicios;
 public:
 #pragma region Constructor y Destructor:
 	cServidor();
@@ -18,11 +20,11 @@ public:
 
 #pragma region Metodos:
 	void AgregarUsuario(cUsuarios* usuario);
-	void AgregarServicio();
-	void LoggearUsuario();
-	void ListarServicios();
-	void Desconectar();
-	void UsarServicio();
+	void AgregarServicio(cServicios* servicio);
+	void LoggearUsuario(cUsuarios* usuario);
+	cLista<cServicios>*ListarServicios(cUsuarios* usuario);
+	void Desconectar(cUsuarios* usuario);
+	void UsarServicio(cServicios* servicios);
 	void cBackUp();
 	void GetEstadisticas();
 #pragma endregion

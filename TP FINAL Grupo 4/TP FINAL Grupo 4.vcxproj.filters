@@ -65,7 +65,7 @@
     <ClCompile Include="cFecha.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Servicios.cpp">
+    <ClCompile Include="cServicios.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
