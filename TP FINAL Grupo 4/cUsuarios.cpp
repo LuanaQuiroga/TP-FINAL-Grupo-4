@@ -26,10 +26,16 @@ void cUsuarios::IniciarSesion() {
 void cUsuarios::CrearCUenta() {
 
 }
-void cUsuarios::SeleccionarServicio() {
+void cUsuarios::SeleccionarServicio(cLista<cServicios>* lista) {
+	int i = 0;
+	this->servicio=lista->Buscar(i);
+	cout << "Seleccione servicio" << endl;
+	
 
 }
 void cUsuarios::UsarServicio() {
+	this->servicio->Iniciar();
+	this->servicio->Apagar();
 
 }
 
@@ -40,4 +46,7 @@ void cUsuarios::sethoy(){
 	Fecha.tm_mday = aux.tm_mday;
 	Fecha.tm_mon = aux.tm_mon;
 	Fecha.tm_year = aux.tm_year;
+}
+void cUsuarios::setLogueado(bool log){
+	this->Logueado = log;
 }

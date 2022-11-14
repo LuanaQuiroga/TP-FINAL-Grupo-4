@@ -4,9 +4,11 @@
 #include "cEnum.h"
 #include "cFecha.h"
 #include "cServicios.h"
+#include "Lista.h"
 #ifndef CUSUARIOS_H
 #define CUSUARIOS_H
 using namespace std;
+class cServicios;
 class cUsuarios
 {
 private:
@@ -21,6 +23,7 @@ private:
 	eTipoCliente Cliente;
 	bool Logueado;
 	cFecha* FechaLogging;
+	cServicios* servicio;
 public:
 #pragma region Constructor y Destructor:
 	cUsuarios(string Nombre, bool Estado, ePaises Pais, eTipoCliente Cliente, bool Logueado, cFecha* FechaLogging);
@@ -31,7 +34,7 @@ public:
 	void ChequearListas();
 	void IniciarSesion();
 	void CrearCUenta();
-	void SeleccionarServicio();
+	void SeleccionarServicio(cLista<cServicios>* lista);
 	void UsarServicio();
 #pragma endregion
 #pragma region Getters y Setters
@@ -39,6 +42,7 @@ public:
 	int getnumcliente() { return this->NumCliente; }
 	eTipoCliente gettipocliente() { return this->Cliente; }
 	void sethoy();
+	void setLogueado(bool log);
 };
 #endif
 

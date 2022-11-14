@@ -8,6 +8,7 @@ cServicios::cServicios(string nombre, float duracion, int visitas, int cantVisit
 	this->Cliente = cliente;
 	this->Estado = estado;
 	this->Pais = pais;
+	this->CantHoras = 0;
 }
 cServicios::~cServicios() {
 

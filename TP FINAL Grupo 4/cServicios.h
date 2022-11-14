@@ -16,6 +16,7 @@ private:
 	float Duracion;
 	int Visitas;
 	int CantVisitas;
+	int CantHoras;
 	eEstadoNivel EstadoNivel;
 	eEstado Estado;
 	eTipoCliente Cliente;
@@ -44,6 +45,10 @@ public:
 #pragma region Getters y Setters
 	eEstadoNivel getestado() { return this->EstadoNivel; }
 	ePaises getpais() { return this->Pais; }
+	int getcantvisitas() { return this->CantVisitas; }
+	void setcantvisitas(int cantvisitas) { this->CantVisitas = cantvisitas; }
+	int getcanthoras() { return this->CantHoras; }
+	void setcanthoras(int canthoras) {this->CantHoras=canthoras; }
 #pragma endregion
 };
 #endif
