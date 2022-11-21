@@ -133,7 +133,11 @@
     <ClInclude Include="cFecha.h" />
     <ClInclude Include="cJuegos.h" />
     <ClInclude Include="cServicios.h" />
+    <ClInclude Include="cServicioUsuario.h" />
     <ClInclude Include="cServidor.h" />
+    <ClInclude Include="cUsuarioBASIC.h" />
+    <ClInclude Include="cUsuarioFREE.h" />
+    <ClInclude Include="cUsuarioPREMIUM.h" />
     <ClInclude Include="cUsuarios.h" />
     <ClInclude Include="cVideos.h" />
     <ClInclude Include="Lista.h" />
@@ -144,7 +148,11 @@
     <ClCompile Include="cEnum.cpp" />
     <ClCompile Include="cFecha.cpp" />
     <ClCompile Include="cJuegos.cpp" />
+    <ClCompile Include="cServicioUsuario.cpp" />
     <ClCompile Include="cServidor.cpp" />
+    <ClCompile Include="cUsuarioBASIC.cpp" />
+    <ClCompile Include="cUsuarioFREE.cpp" />
+    <ClCompile Include="cUsuarioPREMIUM.cpp" />
     <ClCompile Include="cUsuarios.cpp" />
     <ClCompile Include="cVideos.cpp" />
     <ClCompile Include="Main.cpp" />

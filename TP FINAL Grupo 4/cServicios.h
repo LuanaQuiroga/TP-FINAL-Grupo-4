@@ -1,14 +1,21 @@
 #pragma once
+#ifndef CSERVICIOS_H
+#define CSERVICIOS_H
 #include <iostream>
 #include <string>
 #include "cEnum.h"
-#include "cUsuarios.h"
 #include "cServidor.h"
-#ifndef CSERVICIOS_H
-#define CSERVICIOS_H
+//#include "cUsuarioBASIC.h"
+//#include "cUsuarioFREE.h"
+//#include "cUsuarioPREMIUM.h"
+
 
 using namespace std;
-class cUsuarios;
+//class cUsuarios;
+class cServidor;
+//class cUsuarioBASIC;
+//class cUsuarioFREE;
+//class cUsuarioPREMIUM;
 class cServicios {
 	friend class cServidor;
 private: 
@@ -33,7 +40,7 @@ public:
 	void EstadisticaUsuario();
 	void PromUsuariosConectados();
 	void ListarServicios();
-	bool Disponible(cUsuarios* usuario);
+	//bool Disponible(cUsuarios* usuario);
 #pragma endregion
 
 #pragma region Metodos Virtuales
@@ -49,6 +56,7 @@ public:
 	void setcantvisitas(int cantvisitas) { this->CantVisitas = cantvisitas; }
 	int getcanthoras() { return this->CantHoras; }
 	void setcanthoras(int canthoras) {this->CantHoras=canthoras; }
+	void setclientedisponible(eTipoCliente cliente);
 #pragma endregion
 };
 #endif

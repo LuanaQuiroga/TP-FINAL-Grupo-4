@@ -28,7 +28,31 @@ void cServicios::PromUsuariosConectados() {
 void cServicios::ListarServicios() {
 
 }
-bool cServicios::Disponible(cUsuarios* usuario) {
-	return usuario->gettipocliente() >= this->Cliente; //hacer con pais
-	
+void cServicios::setclientedisponible(eTipoCliente cliente) {
+	this->Cliente = cliente;
 }
+/*
+* bool cServicios::Disponible(cUsuarios* usuario) {
+	try {
+		if (usuario->gettipocliente() == eTipoCliente::BASIC) {
+			//return usuario->gettipocliente() >= this->Cliente && usuario->getpais()>=this->Pais;
+			cUsuarioBASIC* usuarioBASIC = (cUsuarioBASIC*) dynamic_cast<cUsuarioBASIC*>(usuario);
+			return usuarioBASIC->gettipocliente() == this->Cliente && usuarioBASIC->getpais() == this->Pais;
+		}
+		if (usuario->gettipocliente() == eTipoCliente::FREE) {
+			cUsuarioFREE* usuarioFREE = (cUsuarioFREE*) dynamic_cast<cUsuarioFREE*>(usuario);
+			return usuarioFREE->gettipocliente() == this->Cliente && usuarioFREE->getpais() == this->Pais;
+		}
+		if (usuario->gettipocliente() == eTipoCliente::PREMIUM) {
+			cUsuarioPREMIUM* usuarioPREMIUM = (cUsuarioPREMIUM*) dynamic_cast<cUsuarioPREMIUM*>(usuario);
+			return usuarioPREMIUM->gettipocliente() == this->Cliente && usuarioPREMIUM->getpais() == this->Pais;
+		}
+		
+	}
+	catch (exception* ex) {
+		std::cout << ex->what();
+	}
+	return false;
+}
+*/
+

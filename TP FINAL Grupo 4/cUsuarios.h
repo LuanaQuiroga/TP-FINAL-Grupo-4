@@ -1,12 +1,14 @@
 #pragma once
+#ifndef CUSUARIOS_H
+#define CUSUARIOS_H
 #include <iostream>
 #include <string>
 #include "cEnum.h"
 #include "cFecha.h"
 #include "cServicios.h"
 #include "Lista.h"
-#ifndef CUSUARIOS_H
-#define CUSUARIOS_H
+
+
 using namespace std;
 class cServicios;
 class cUsuarios
@@ -35,14 +37,17 @@ public:
 	void IniciarSesion();
 	void CrearCUenta();
 	void SeleccionarServicio(cLista<cServicios>* lista);
-	void UsarServicio();
+	virtual void UsarServicio() = 0;
 #pragma endregion
 #pragma region Getters y Setters
 	tm getfechalogging() { return this->Fecha; }
 	int getnumcliente() { return this->NumCliente; }
-	eTipoCliente gettipocliente() { return this->Cliente; }
+	virtual eTipoCliente gettipocliente() = 0;
+	ePaises getpais() { return this->Pais; }
 	void sethoy();
 	void setLogueado(bool log);
+	cServicios* getservicio() { return this->servicio; }
+	void setservicio(cServicios* servicio);
 };
 #endif
 

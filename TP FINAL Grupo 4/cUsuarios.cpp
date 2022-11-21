@@ -38,7 +38,9 @@ void cUsuarios::UsarServicio() {
 	this->servicio->Apagar();
 
 }
-
+void cUsuarios::setservicio(cServicios* servicio) {
+	this->servicio = servicio;
+}
 void cUsuarios::sethoy(){
 	time_t now = time(0);
 	tm aux;
