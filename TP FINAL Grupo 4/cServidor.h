@@ -6,15 +6,20 @@
 #include "cUsuarios.h"
 #include "cServicios.h"
 #include "Lista.h"
+#include "cBackUp.h"
 
 using namespace std;
 class cUsuarios;
 class cServicios;
-class cServidor{ 
+class cBackUp;
+class cServidor {
 private:
+	cFecha* Fecha;
 	cLista<cUsuarios>* ListaUsuarios;
 	cLista<cServicios>* ListaServicios;
 	cLista<cServicios>* ListaServiciosFREE;
+	cLista<cBackUp>* ListaBackUp;
+	int contusuariosconectados;
 public:
 #pragma region Constructor y Destructor:
 	cServidor();
@@ -25,15 +30,36 @@ public:
 	void AgregarUsuario(cUsuarios* usuario);
 	void AgregarServicio(cServicios* servicio);
 	void LoggearUsuario(cUsuarios* usuario);
-	cLista<cServicios>*ListarServicios(cUsuarios* usuario);
+	cLista<cServicios>* ListarServicios(cUsuarios* usuario);
 	void Desconectar(cUsuarios* usuario);
-	void UsarServicio();
-	void cBackUp();
-	
+	void UsarServicio(cServicios* servicio);
+	void HacerBackup();
+	//int CantUsuariosConectados(cBackUp* cantusuarios);
+	void generarlistaFREE();
+	cJuegos* MasJugado();
+	cVideos* MasVisto();
+	cAudios* MasEscuchado();
 #pragma endregion
 #pragma region Getters y Setters
+	cFecha* getfecha() { return this->Fecha; }
+	void setfecha(cFecha* Fecha);
+	int getcontusuariosconectados() { return this->contusuariosconectados; }
+	void setcontusuariosconectados(int contusuariosconectados);
 	void GetEstadisticas();
-	void generarlistaFREE();
+	int getpromediousuarios();
+	int getpromediousuarios_semana();
+	
+	/*
+	* void getEstadistica_usuario_unico();
+	void setEstadistica_usuario_unico();
+	void getEstadisticasFREE();
+	void setEstadisticasFREE();
+	void getEstadisticasBASIC();
+	void setEstadisticasBASIC();
+	void getEstadisticasPREMIUM();
+	void setEstadisticasPREMIUM();
+	*/
+	
 #pragma endregion
 };
 #endif

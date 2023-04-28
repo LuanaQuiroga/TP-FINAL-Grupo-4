@@ -13,7 +13,23 @@
 class cUsuarioBASIC;
 
 using namespace std;
+ostream& operator<<(ostream& os, const cFecha& dt)
+{
+	os << dt.dia << '/' << dt.mes << '/' << dt.anio;
+	return os;
+}
+ostream& operator<<(ostream& os, const cUsuarios& dt)
+{
+	os << dt.Nombre << '/' << dt.Logueado<< '/' << dt.Estado;
+	return os;
+}
+void operator + (cUsuarios& usuario, cServidor& servidor) {
+	usuario.IniciarSesion();
+}
 
+void operator - (cUsuarios& usuario, cServidor& servidor) {
+	usuario.CerrarSesion();
+}
 int main()
 {
 	try {
@@ -43,13 +59,11 @@ int main()
 		cJuegos* juego1 = new cJuegos("Juego1", 32.5, 5, 32, eEstadoNivel::Nivel2, eTipoCliente::FREE, eEstado::Apagado, ePaises::Chile);
 		_servidor->AgregarServicio(juego1);
 		_servidor->LoggearUsuario(usuario1);
-		//usuario1->SeleccionarServicio(_servidor->ListarServicios(usuario1)); //le entrego la lista y selecciono 1
+		usuario1->SeleccionarServicio(_servidor->ListarServicios(usuario1)); //le entrego la lista y selecciono 1
 		usuario1->UsarServicio();
 		_servidor->GetEstadisticas();  //imprimo estadisticas
 		delete FechaHoy;
 		delete _servidor;
-		delete ListaUsuarios;
-		delete juego1;
 
 	}
 	catch (exception* ex) {

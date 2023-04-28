@@ -16,13 +16,17 @@ void cJuegos::Iniciar() {
 void cJuegos::Apagar() {
 	int i = rand() % 5 + 1;
 	this->setcanthoras(this->getcanthoras() + i);
+	cout << "El juego ha sido apagado" << endl;
 }
 void cJuegos::Pausar() {
-
+	int i = rand() % 5 + 1;
+	this->setcanthoras(this->getcanthoras() + i);
+	cout << "El juego ha sido pausado" << endl;
 }
-void cJuegos::Descargar() {
 
-}
 void cJuegos::Disponible() {
-
+	this->getclientedisponible();
+}
+void cJuegos::NivelJuego() {
+	this->getestadonivel();
 }

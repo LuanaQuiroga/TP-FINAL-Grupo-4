@@ -1,4 +1,7 @@
 #include "cServicios.h"
+#include "cUsuarioBASIC.h"
+#include "cUsuarioFREE.h"
+#include "cUsuarioPREMIUM.h"
 cServicios::cServicios(string nombre, float duracion, int visitas, int cantVisitas, eEstadoNivel estadonivel,eTipoCliente cliente, eEstado estado, ePaises pais) {
 	this->Nombre = nombre;
 	this->Duracion = duracion;
@@ -13,26 +16,11 @@ cServicios::cServicios(string nombre, float duracion, int visitas, int cantVisit
 cServicios::~cServicios() {
 
 }
-void cServicios::CalcularEstadistica() {
 
-}
-void cServicios::EstadisticaTipoCliente() {
-
-}
-void cServicios::EstadisticaUsuario() {
-
-}
-void cServicios::PromUsuariosConectados() {
-
-}
-void cServicios::ListarServicios() {
-
-}
 void cServicios::setclientedisponible(eTipoCliente cliente) {
 	this->Cliente = cliente;
 }
-/*
-* bool cServicios::Disponible(cUsuarios* usuario) {
+bool cServicios::Disponible(cUsuarios* usuario) {
 	try {
 		if (usuario->gettipocliente() == eTipoCliente::BASIC) {
 			//return usuario->gettipocliente() >= this->Cliente && usuario->getpais()>=this->Pais;
@@ -54,5 +42,15 @@ void cServicios::setclientedisponible(eTipoCliente cliente) {
 	}
 	return false;
 }
-*/
+void cServicios::Descargar(cUsuarios* usuario) {
+	try {
+		cUsuarioPREMIUM* usuario = (cUsuarioPREMIUM*) dynamic_cast<cUsuarioPREMIUM*>(usuario);
+		cout << "El usuario esta haciendo record" << endl;
+
+	}
+	catch (exception ex) {
+		throw("El usuario no tiene permitido descargar");
+	}
+}
+
 

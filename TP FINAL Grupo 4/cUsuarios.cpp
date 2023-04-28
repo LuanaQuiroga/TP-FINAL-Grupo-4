@@ -17,20 +17,22 @@ cUsuarios::cUsuarios(string nombre, bool estado, ePaises pais, eTipoCliente clie
 cUsuarios::~cUsuarios() {
 
 }
+
 void cUsuarios::ChequearListas() {
 
 }
 void cUsuarios::IniciarSesion() {
-
+	cout << "Inicio sesion" << endl;
 }
-void cUsuarios::CrearCUenta() {
-
+void cUsuarios::CrearCuenta() {
+	cout << "Se ha creado una nueva cuenta" << endl;
 }
 void cUsuarios::SeleccionarServicio(cLista<cServicios>* lista) {
 	int i = 0;
 	this->servicio=lista->Buscar(i);
 	cout << "Seleccione servicio" << endl;
-	
+	cServicios* aux = this->servicio = lista->Buscar(i);
+	aux->setcantvisitas(aux->getcantvisitas() + 1); //incremento la cantidad de visitas
 
 }
 void cUsuarios::UsarServicio() {

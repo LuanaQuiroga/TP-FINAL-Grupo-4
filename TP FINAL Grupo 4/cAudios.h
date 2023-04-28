@@ -2,8 +2,12 @@
 #include <iostream>
 #include <string>
 #include "cServicios.h"
+#include "cUsuarioPREMIUM.h"
+#include "cUsuarioBASIC.h"
 
 using namespace std;
+class cUsuarioPREMIUM;
+class cUsuarioBASIC;
 class cAudios: public cServicios {
 private:
 	const int duracionmax = 10;
@@ -23,7 +27,15 @@ public:
 	void Disponible();
 	void FastBackward();
 	void FastFoward();
-	void Record();
+	void Record(cUsuarios* usuario);
+#pragma endregion
+#pragma Getters y Setters:
+	void SetMinAudios();
+	int GetMinAudios(int minutos);
+	int GetDuracionMaxAudios(int duracionmax);
+	void SetDuracionMaxAudios();
+	int GetSegAudios(int segundos);
+	void SetSegAudios();
 #pragma endregion
 };
 
